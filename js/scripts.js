@@ -35,7 +35,7 @@ fetch('https://randomuser.me/api/?results=12')
                                 <hr>
                                 <p class="modal-text">${user.cell}</p>
                                 <p class="modal-text">${user.location.street.number} ${user.location.street.name}, ${user.location.city}, ${user.location.state}, ${user.location.postcode}</p>
-                                <p class="modal-text">Birthday: ${user.dob.date}</p>
+                                <p class="modal-text">Birthday: ${new Date(user.dob.date).toLocaleDateString()}</p>
                             </div>
                         </div>
                     `);
